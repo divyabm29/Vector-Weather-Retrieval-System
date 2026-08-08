@@ -1,0 +1,23 @@
+# Databricks App configuration for Weather Vector Retrieval System
+name: weather-vector-retrieval
+
+# Python dependencies
+dependencies:
+  - Flask>=2.3.0
+  - requests>=2.31.0
+  - psycopg2-binary>=2.9.0
+
+# Environment variables
+env:
+  - name: WEATHER_TABLE_NAME
+    value: weather_documents
+  - name: FLASK_RUN_PORT
+    value: "8080"
+
+# Entry point
+command: ["python", "app.py"]
+
+# Resource configuration (optional)
+resources:
+  memory: "2Gi"
+  cpu: "1"
